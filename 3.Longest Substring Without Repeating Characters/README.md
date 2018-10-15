@@ -88,3 +88,5 @@ public int lengthOfLongestSubstring(String s) {
 ```
 
 其实本质思路和用hashmap是一样的，只不过通过引入一个index[]，用char的值作为数组的下标值，数组下标值对应的数据值对应索引值，代码很简洁，值得借鉴。
+
+i = Math.max(i, index[s.charAt(j)]);这句代码的意义是，假设目标s为abcccba，当我们扫描到第二个b的时候，发现b已经存在，这时候把i的置为2，当我们扫描到第二个a的时候，发现a已经存在，但是这时候当前序列为cccb，即a在s中，但是不在cccb中，所以此时i的值是不变的。
